@@ -56,28 +56,23 @@ void setup() {
   // Routing
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(SPIFFS, "/index.html");
-  
 		  });
 
   server.on("/temperature", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", readBMP180Temperature().c_str());
-  
-		  });
+     });
 
   server.on("/pressure", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", readBMP180Pressure().c_str());
-  
 		  });
 
   server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(SPIFFS, "/style.css", "text/css");
-  
 		  });
 
   server.on("/script.js", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/script.js", "text/javascript");
-  
-	  });
+    request->send(SPIFFS, "/script.js", "text/javascript"); 
+	   });
 
   server.begin();
 
