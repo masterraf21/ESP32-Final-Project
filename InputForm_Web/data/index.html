@@ -16,22 +16,23 @@
                 <p>Powered by <a href="https://ifttt.com" target="_blank">IFTTT</a> and <a href="https://docs.google.com/spreadsheets/u/0/" target="_blank">Google Sheets</a></p>
             </div>
             <div class="form-body">
-                <div class="form-input">
-                    <input type="text" name="nama" placeholder=" " />
-                    <label class="text-label">Nama</label>
-                </div>
-                <div class="form-input">
-                    <input type="text" name="feedback" placeholder=" " />
-                    <label class="text-label">Feedback</label>
-                </div>
-                <div class="form-input">
-                    <input type="text" name="rating" placeholder=" " min="0" max="5" />
-                    <label class="text-label">Rating</label>
-                </div>
-                <div class="form-input">
-                    <input type="submit" class="button-primary" value="Submit Form">
-                </div>
-
+                <form action="/post" method="POST">
+                    <div class="form-input">
+                        <input type="text" name="nama" placeholder=" " />
+                        <label class="text-label">Nama</label>
+                    </div>
+                    <div class="form-input">
+                        <input type="text" name="feedback" placeholder=" " />
+                        <label class="text-label">Feedback</label>
+                    </div>
+                    <div class="form-input">
+                        <input type="number" name="rating" placeholder=" " min="0" max="5" />
+                        <label class="text-label">Rating</label>
+                    </div>
+                    <div class="form-input">
+                        <input type="submit" class="button-primary" value="Submit Form">
+                    </div>
+                </form>
             </div>
         </div>
     </section>
